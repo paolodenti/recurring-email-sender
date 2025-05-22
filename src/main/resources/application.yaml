@@ -1,0 +1,48 @@
+spring:
+  profiles:
+    active: local
+  mail:
+    host: ${SMTP_HOST}
+    port: ${SMTP_PORT}
+    username: ${SMTP_USER}
+    password: ${SMTP_PASS}
+    properties:
+      mail:
+        smtp:
+          from: ${SMTP_FROM}
+          auth: ${SMTP_AUTH}
+          starttls:
+            enable: ${SMTP_START_TLS}
+    default-encoding: UTF-8
+  threads:
+    virtual:
+      enabled: true
+
+server:
+  port: ${SERVER_PORT:8080}
+  servlet:
+    context-path: /
+
+management:
+  server:
+    port: ${MANAGEMENT_PORT:9000}
+  endpoints:
+    web:
+      base-path: /monitoring
+      exposure:
+        include: health
+  endpoint:
+    health:
+      show-details: always
+      probes:
+        enabled: true
+      access: read_only
+  health:
+    livenessstate:
+      enabled: true
+    readinessstate:
+      enabled: true
+
+app:
+  mail:
+    plain-name: ${MAIL_PLAIN_NAME:Someone}
