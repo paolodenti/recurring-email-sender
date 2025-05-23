@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.github.paolodenti</groupId>
     <artifactId>recurring-email-sender</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
     <name>recurring-email-sender</name>
     <description>Recurring Email Sender</description>
     <properties>

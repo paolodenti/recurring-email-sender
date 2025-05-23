@@ -49,3 +49,5 @@ app:
     delay: ${MAIL_DELAY:3600000}
     title: ${MAIL_TITLE:This is a test title}
     body: ${MAIL_BODY:Hello, this is a test email.}
+    from: ${SMTP_FROM:}
+    to: ${MAIL_TO:}
