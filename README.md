@@ -19,8 +19,8 @@ EOM
 docker run --rm -it \
 -e SMTP_USER="<smtp username>" \
 -e SMTP_PASS="<smtp password>" \
--e SMTP_HOST="<the smtp host>" \
--e SMTP_PORT="<the smtp port>" \
+-e SMTP_HOST="<smtp host>" \
+-e SMTP_PORT="<smtp port>" \
 -e SMTP_AUTH="<true|false>" \
 -e SMTP_START_TLS="<true|false>" \
 -e SMTP_FROM="someone@example.com" \
