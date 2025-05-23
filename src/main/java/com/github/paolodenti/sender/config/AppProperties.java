@@ -19,5 +19,7 @@ public class AppProperties {
 
         private String plainName;
         private long delay;
+        private String title;
+        private String body;
     }
 }
