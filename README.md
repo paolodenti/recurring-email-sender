@@ -32,30 +32,24 @@ docker run --rm -it \
 paolodenti/recurring-email-sender:latest
 ```
 
-### Local execution
+### Local development
 
 Java 21 needed.
 
 ```bash
-# send an email every hour
 
-read -r -d '' BODY << EOM
-This is
-the body
-of the email
-EOM
+docker compose -f ./.docker/docker-compose.yml up -d
 
-SMTP_USER="<smtp username>" \
-SMTP_PASS="<smtp password>" \
-SMTP_HOST="<smtp host>" \
-SMTP_PORT="<smtp port>" \
-SMTP_AUTH="<true|false>" \
-SMTP_START_TLS="<true|false>" \
+SMTP_HOST="127.0.0.1" \
+SMTP_PORT="1025" \
+SMTP_AUTH="false" \
+SMTP_START_TLS="false" \
 SMTP_FROM="someone@example.com" \
 MAIL_PLAIN_NAME="Someone" \
-MAIL_DELAY_MINUTES=60 \
+MAIL_DELAY_MINUTES=1 \
 MAIL_TITLE="Test email" \
-MAIL_BODY="$BODY" \
+MAIL_BODY="some body content here" \
 MAIL_TO="someone1@<example.com>,someone2@<example.com>" \
+APP_LOG_LEVEL="DEBUG" \
 ./mvnw spring-boot:run
 ```
