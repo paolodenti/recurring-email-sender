@@ -2,7 +2,7 @@
 
 Quick tooling for my friend Walter.
 
-Send an email every n milliseconds.
+Send an email every *n* milliseconds.
 
 ### Docker execution
 
