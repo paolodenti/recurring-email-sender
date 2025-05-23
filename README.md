@@ -34,6 +34,8 @@ paolodenti/recurring-email-sender:latest
 
 ### Local execution
 
+Java 21 needed.
+
 ```bash
 # send an email every hour
 
