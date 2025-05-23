@@ -13,6 +13,8 @@ SMTP_USER="<your smtp username>"
 SMTP_PASS="<your smtp password>"
 SMTP_AUTH="<true|false>"
 SMTP_START_TLS="<true|false>"
+
+TODO
 ```
 
 ### Start locally
