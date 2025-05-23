@@ -5,12 +5,12 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.4.4</version>
+        <version>3.5.0</version>
         <relativePath/>
     </parent>
     <groupId>com.github.paolodenti</groupId>
     <artifactId>recurring-email-sender</artifactId>
-    <version>0.0.2</version>
+    <version>0.0.3</version>
     <name>recurring-email-sender</name>
     <description>Recurring Email Sender</description>
     <properties>
@@ -18,7 +18,7 @@
 
         <!-- dev support libraries -->
         <maven.checkstyle-plugin.version>3.6.0</maven.checkstyle-plugin.version>
-        <checkstyle.version>10.23.0</checkstyle.version>
+        <checkstyle.version>10.24.0</checkstyle.version>
     </properties>
 
     <dependencies>
