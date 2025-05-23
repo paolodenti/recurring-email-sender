@@ -27,7 +27,7 @@ public class EmailSenderService {
     /**
      * Scheduled task to send email.
      */
-    @Scheduled(fixedDelayString = "${app.mail.delay}")
+    @Scheduled(fixedDelayString = "#{appProperties.getMail().getDelayMilliseconds()}")
     public void sendEmail() {
 
         log.info("Sending email...");
