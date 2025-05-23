@@ -18,7 +18,7 @@
 
         <!-- dev support libraries -->
         <maven.checkstyle-plugin.version>3.6.0</maven.checkstyle-plugin.version>
-        <checkstyle.version>10.23.0</checkstyle.version>
+        <checkstyle.version>10.24.0</checkstyle.version>
     </properties>
 
     <dependencies>
