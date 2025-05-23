@@ -2,7 +2,9 @@
 
 Quick tooling for my friend Walter.
 
-### Container Setup
+Send an email every n milliseconds.
+
+### Docker execution
 
 ```bash
 
