@@ -13,7 +13,7 @@ Send an email every *n* milliseconds.
 read -r -d '' BODY << EOM
 This is
 the body
-of a text email
+of the email
 EOM
 
 docker run --rm -it \
@@ -23,11 +23,11 @@ docker run --rm -it \
 -e SMTP_PORT="<the smtp port>" \
 -e SMTP_AUTH="<true|false>" \
 -e SMTP_START_TLS="<true|false>" \
--e SMTP_FROM="someone@somewhere.com" \
+-e SMTP_FROM="someone@example.com" \
 -e MAIL_PLAIN_NAME="Someone" \
 -e MAIL_DELAY=3600000 \
 -e MAIL_TITLE="Test email" \
 -e MAIL_BODY="$BODY" \
--e MAIL_TO="someone1@<somewhere.com>,someone2@<somewhere.com>" \
+-e MAIL_TO="someone1@<example.com>,someone2@<example.com>" \
 paolodenti/recurring-email-sender:latest
 ```
