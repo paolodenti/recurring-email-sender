@@ -5,7 +5,7 @@ Quick tooling for my friend Walter.
 ### Container Setup
 
 ```bash
-MAIL_PLAIN_NAME="<THe name of the sender>"
+MAIL_PLAIN_NAME="<The name of the sender>"
 SMTP_FROM="<email sender>"
 SMTP_HOST="<your smtp host>"
 SMTP_PORT="<your smtp port>"
