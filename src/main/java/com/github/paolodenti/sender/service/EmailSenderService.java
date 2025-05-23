@@ -24,6 +24,9 @@ public class EmailSenderService {
     private final JavaMailSender emailSender;
     private final TemplateEngine templateEngine;
 
+    /**
+     * Scheduled task to send email.
+     */
     @Scheduled(fixedDelayString = "${app.mail.delay}")
     public void sendEmail() {
 
