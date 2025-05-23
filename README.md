@@ -38,6 +38,7 @@ Java 21 needed.
 
 ```bash
 
+# start mailhog on port 1025 smtp / 8025 Web UI
 docker compose -f ./.docker/docker-compose.yml up -d
 
 SMTP_HOST="127.0.0.1" \
