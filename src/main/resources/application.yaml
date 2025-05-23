@@ -46,3 +46,4 @@ management:
 app:
   mail:
     plain-name: ${MAIL_PLAIN_NAME:Someone}
+    delay: ${MAIL_DELAY:3600000}

@@ -18,5 +18,6 @@ public class AppProperties {
     public static class MailProperties {
 
         private String plainName;
+        private long delay;
     }
 }

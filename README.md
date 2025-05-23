@@ -22,8 +22,9 @@ TODO
 ```bash
 docker compose -f ./.docker/docker-compose.yml up -d
 
+# send an email every hour
 SMTP_HOST="127.0.0.1" SMTP_PORT="1025" SMTP_AUTH="false" SMTP_START_TLS="false" \
-MAIL_PLAIN_NAME="Walter" SMTP_FROM="walter@localhost" \
+MAIL_PLAIN_NAME="Walter" SMTP_FROM="walter@localhost" MAIL_DELAY=3600000 \
 ./mvnw spring-boot:run
 
 # browse http://localhost:8025
