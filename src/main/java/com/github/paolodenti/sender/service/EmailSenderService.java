@@ -30,10 +30,11 @@ public class EmailSenderService {
     @Scheduled(fixedDelayString = "#{appProperties.getMail().getDelayMilliseconds()}")
     public void sendEmail() {
 
-        log.info("Sending email...");
+        log.info("Sending all emails ...");
         for (String to : appProperties.getMail().getTo()) {
             sendEmail(to);
         }
+        log.info("All emails sent.");
     }
 
     /**
@@ -43,7 +44,6 @@ public class EmailSenderService {
      */
     public void sendEmail(String to) {
 
-        log.debug("sending email");
         if (to == null) {
             log.debug("No recipient, skipping");
             return;
@@ -67,9 +67,9 @@ public class EmailSenderService {
             final String htmlContent = this.templateEngine.process("emailtemplate", ctx);
             email.setText(htmlContent, true);
 
-            log.debug("Sending email");
+            log.debug("Sending email to {}", to);
             emailSender.send(mimeMessage);
-            log.debug("Email sent");
+            log.debug("Email to {} sent", to);
         } catch (MessagingException | UnsupportedEncodingException e) {
             log.error("Cannot send email", e);
         }
