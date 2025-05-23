@@ -21,9 +21,13 @@ public class AppProperties {
 
         private String from;
         private String plainName;
-        private long delay;
+        private long delayMinutes;
         private String title;
         private String body;
         private List<String> to = new ArrayList<>();
+
+        public long getDelayMilliseconds() {
+            return delayMinutes * 60L * 1000L;
+        }
     }
 }

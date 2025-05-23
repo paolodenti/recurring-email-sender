@@ -25,7 +25,7 @@ docker run --rm -it \
 -e SMTP_START_TLS="<true|false>" \
 -e SMTP_FROM="someone@example.com" \
 -e MAIL_PLAIN_NAME="Someone" \
--e MAIL_DELAY=3600000 \
+-e MAIL_DELAY_MINUTES=60 \
 -e MAIL_TITLE="Test email" \
 -e MAIL_BODY="$BODY" \
 -e MAIL_TO="someone1@<example.com>,someone2@<example.com>" \
